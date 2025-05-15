@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Now | Bite & Co</title>
+  <meta name="description" content="Order your favorite sandwiches and salads online from Bite & Co in Barrie." />
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+    .order-header {
+      background: #f8f8f8;
+      padding: 60px 0 30px;
+      text-align: center;
+    }
+    .order-header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .order-header p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .order-frame {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Bar -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename" style="font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 2rem;">Bite &amp; Co</h1>
+        <span style="color: red; font-size: 2rem;">.</span>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#menu">Menu</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+          <li><a href="index.html#message">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero/Heading -->
+  <section class="order-header">
+    <div class="container">
+      <h1>Order Now</h1>
+      <p>Sandwiches. Salads. Snacks. Delivered fresh from Bite &amp; Co.</p>
+    </div>
+  </section>
+
+  <!-- GloriaFood Ordering Widget -->
+  <iframe 
+    class="order-frame"
+    src="https://www.foodbooking.com/api/fb/3g6ro">
+  </iframe>
+
+  <!-- Footer (optional or you can reuse from your index.html) -->
+  <footer class="footer dark-background text-center py-4">
+    <p class="text-white mb-0">© 2025 <strong>Bite &amp; Co</strong>. All Rights Reserved</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
