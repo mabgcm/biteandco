@@ -173,4 +173,11 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Current copyright year
+   */
+  document.querySelectorAll('.copyright-year').forEach(year => {
+    year.textContent = new Date().getFullYear();
+  });
+
 })();
