@@ -1,0 +1,230 @@
+[
+  {
+    "id": "baked_beef_mac_cheese",
+    "day": "",
+    "name": "Baked Beef Mac & Cheese",
+    "description": "Oven-baked macaroni with seasoned beef, tomato base, and melted cheddar.",
+    "comesWith": [
+      "Side garden salad"
+    ],
+    "ingredients": [
+      "Ground beef (120g)",
+      "Pasta (100g)",
+      "Cheddar cheese",
+      "Cream and milk",
+      "Tomato base",
+      "Onion",
+      "Garlic"
+    ],
+    "nutrition": {
+      "calories": "~780 kcal",
+      "protein": "35g",
+      "carbs": "70g",
+      "fat": "38g"
+    },
+    "price": 15.99,
+    "photo": "/assets/img/menu/beefmac.png",
+    "alt": "Baked beef mac and cheese"
+  },
+  {
+    "id": "stuffed_bell_peppers",
+    "day": "Tuesday",
+    "name": "Stuffed Bell Peppers (Beef & Rice)",
+    "description": "2 Bell pepper halves stuffed with seasoned ground beef, rice, tomato sauce, onion, and spices.",
+    "comesWith": [
+      "Yogurt sauce"
+    ],
+    "optional": [
+      "Extra half (+$2.50)"
+    ],
+    "ingredients": [
+      "Ground beef (120g)",
+      "Rice",
+      "Bell peppers",
+      "Cheddar cheese",
+      "Tomato sauce",
+      "Onion",
+      "Spices"
+    ],
+    "nutrition": {
+      "calories": "~620 kcal",
+      "protein": "32g",
+      "carbs": "55g",
+      "fat": "22g"
+    },
+    "price": 15.99,
+    "photo": "/assets/img/menu/peppers.png",
+    "alt": "Stuffed bell peppers with beef and rice"
+  },
+  {
+    "id": "ground_beef_potato_bake",
+    "day": "Wednesday",
+    "name": "Ground Beef & Potato Bake",
+    "englishName": "Turkish Style Beef & Potato Casserole",
+    "description": "Layered Turkish-style potato bake with seasoned ground beef, onion, tomato sauce, oil, and spices.",
+    "comesWith": [
+      "Side salad"
+    ],
+    "optional": [
+      "Extra portion (+$4)"
+    ],
+    "ingredients": [
+      "Ground beef (130g)",
+      "Potato (200g)",
+      "Onion",
+      "Tomato sauce",
+      "Oil",
+      "Spices"
+    ],
+    "nutrition": {
+      "calories": "~700 kcal",
+      "protein": "34g",
+      "carbs": "60g",
+      "fat": "28g"
+    },
+    "price": 14.99,
+    "photo": "/assets/img/menu/patatezkofte.png",
+    "alt": "Ground beef and potato bake"
+  },
+  {
+    "id": "baked_chicken_potatoes",
+    "day": "Thursday",
+    "name": "Baked Chicken & Potatoes",
+    "description": "Oven-baked chicken thigh and potatoes with seasoning and oil.",
+    "comesWith": [
+      "Coleslaw or salad"
+    ],
+    "optional": [
+      "Extra chicken (+$3)"
+    ],
+    "ingredients": [
+      "Chicken thigh (180g)",
+      "Potato",
+      "Seasoning",
+      "Oil"
+    ],
+    "nutrition": {
+      "calories": "~650 kcal",
+      "protein": "40g",
+      "carbs": "45g",
+      "fat": "30g"
+    },
+    "price": 14,
+    "photo": "/assets/img/menu/ovenchicken.png",
+    "alt": "Baked chicken and potatoes"
+  },
+  {
+    "id": "meatballs_potatoes",
+    "day": "Monday",
+    "name": "Meatballs with Potatoes",
+    "description": "Homemade beef meatballs baked with potatoes, tomato sauce, and onion.",
+    "comesWith": [
+      "Rice or bread"
+    ],
+    "optional": [
+      "Yogurt dip (+$1.50)"
+    ],
+    "ingredients": [
+      "Ground beef (140g)",
+      "Potato",
+      "Tomato sauce",
+      "Onion"
+    ],
+    "nutrition": {
+      "calories": "~720 kcal",
+      "protein": "36g",
+      "carbs": "55g",
+      "fat": "32g"
+    },
+    "price": 15,
+    "photo": "/assets/img/menu/patatezkofte.png",
+    "alt": "Meatballs with potatoes"
+  },
+  {
+    "id": "belen_tava",
+    "day": "Saturday",
+    "name": "Belen Tava",
+    "englishName": "Sizzling Beef & Vegetable Bake",
+    "description": "Turkish beef bake with peppers, onion, tomato sauce, butter, and spices.",
+    "comesWith": [
+      "Butter rice"
+    ],
+    "optional": [
+      "Extra beef (+$4)"
+    ],
+    "ingredients": [
+      "Beef cubes (150g)",
+      "Pepper",
+      "Onion",
+      "Tomato sauce",
+      "Butter",
+      "Spices"
+    ],
+    "nutrition": {
+      "calories": "~680 kcal",
+      "protein": "38g",
+      "carbs": "40g",
+      "fat": "35g"
+    },
+    "price": 17,
+    "photo": "/assets/img/menu/belentava.png",
+    "alt": "Belen Tava sizzling beef and vegetable bake"
+  },
+  {
+    "id": "karniyarik",
+    "day": "Friday",
+    "name": "Karniyarik",
+    "englishName": "Stuffed Eggplant with Ground Beef",
+    "description": "Classic Turkish eggplant stuffed with ground beef, tomato sauce, and onion.",
+    "comesWith": [
+      "Rice"
+    ],
+    "optional": [
+      "Yogurt side (+$2)"
+    ],
+    "ingredients": [
+      "Eggplant",
+      "Ground beef (130g)",
+      "Tomato sauce",
+      "Onion"
+    ],
+    "nutrition": {
+      "calories": "~650 kcal",
+      "protein": "34g",
+      "carbs": "45g",
+      "fat": "30g"
+    },
+    "price": 15,
+    "photo": "/assets/img/karniyarik1.png",
+    "alt": "Karniyarik stuffed eggplant with ground beef"
+  },
+  {
+    "id": "taskebabi",
+    "day": "Sunday",
+    "name": "Tas Kebabi",
+    "englishName": "Slow-Cooked Beef Stew",
+    "description": "Slow-cooked Turkish beef stew with potato, carrot, tomato base, and onion.",
+    "comesWith": [
+      "Rice"
+    ],
+    "optional": [
+      "Extra portion (+$5)"
+    ],
+    "ingredients": [
+      "Beef cubes (160g)",
+      "Potato",
+      "Carrot",
+      "Tomato base",
+      "Onion"
+    ],
+    "nutrition": {
+      "calories": "~720 kcal",
+      "protein": "40g",
+      "carbs": "50g",
+      "fat": "32g"
+    },
+    "price": 18,
+    "photo": "/assets/img/taskebabi.png",
+    "alt": "Tas Kebabi slow-cooked beef stew"
+  }
+]
