@@ -11,7 +11,6 @@ export default function Footer() {
               <p className="mb-3">Serving around Barrie and Simcoe only. Orders are limited and scheduled at least one day in advance.</p>
               <div className="social-links d-flex justify-content-center">
                 <a href="https://www.facebook.com/profile.php?id=61575647294934" target="_blank" rel="noopener noreferrer" className="facebook" aria-label="Bite & Co Facebook"><i className="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/biteandco.ca/" className="instagram" target="_blank" rel="noopener noreferrer" aria-label="Bite & Co Instagram"><i className="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
