@@ -1940,21 +1940,47 @@ section,
   overflow: hidden;
 }
 
+.testimonials .testimonials-slider-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonials .testimonials-slider-track {
+  display: flex;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.testimonials .testimonials-slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
 .testimonials .testimonial-item .testimonial-content {
   border-left: 3px solid var(--accent-color);
   padding-left: 30px;
 }
 
+.testimonials .testimonial-item .testimonial-author {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
 .testimonials .testimonial-item .testimonial-img {
   border-radius: 50%;
   border: 4px solid var(--background-color);
-  margin: 0 auto;
+  height: 56px;
+  margin: 0;
+  object-fit: cover;
+  width: 56px;
 }
 
 .testimonials .testimonial-item h3 {
   font-size: 20px;
   font-weight: bold;
-  margin: 10px 0 5px 0;
+  margin: 0 0 5px 0;
 }
 
 .testimonials .testimonial-item h4 {
@@ -1966,6 +1992,12 @@ section,
 .testimonials .testimonial-item .stars i {
   color: #ffc107;
   margin: 0 1px;
+}
+
+.testimonials .testimonial-item .testimonial-notable {
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
+  font-size: 16px;
+  margin-top: 12px;
 }
 
 .testimonials .testimonial-item .quote-icon-left,
@@ -1993,6 +2025,32 @@ section,
   font-style: italic;
 }
 
+.testimonials .testimonial-controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.testimonials .testimonial-control {
+  align-items: center;
+  background: var(--accent-color);
+  border: 0;
+  border-radius: 50%;
+  color: var(--contrast-color);
+  display: inline-flex;
+  height: 42px;
+  justify-content: center;
+  line-height: 1;
+  transition: background-color 0.2s ease;
+  width: 42px;
+}
+
+.testimonials .testimonial-control:hover,
+.testimonials .testimonial-control:focus {
+  background: color-mix(in srgb, var(--accent-color), black 15%);
+}
+
 .testimonials .swiper-wrapper {
   height: auto;
 }
@@ -2011,6 +2069,13 @@ section,
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
+}
+
+@media (max-width: 575px) {
+  .testimonials .testimonial-item .testimonial-img {
+    height: 42px;
+    width: 42px;
+  }
 }
 
 /*--------------------------------------------------------------

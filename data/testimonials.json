@@ -1,0 +1,131 @@
+{
+  "section": {
+    "eyebrow": "TESTIMONIALS",
+    "title": "What Our Customers",
+    "highlight": "Say About Us",
+    "ctaLabel": "See More Reviews on Facebook",
+    "ctaUrl": "https://www.facebook.com/marketplace/profile/100004979716268/"
+  },
+  "items": [
+    {
+      "name": "Teresita",
+      "date": "24 June 2025",
+      "rating": 5,
+      "notable": [],
+      "text": "Well...I just receive a very very delicious Tiramisu made by Tugce. I have to say: Is absolutely Yummy Yummy Yummy and I like it very very much. I think I’m going to eat the whole thing very soon because I can’t resist this deliciousness. They were super punctual and deliver the cake at the exact time they told me they’ll. Our communication was good and clear during the whole process, the price is outstanding because the cake is huuugeee and the item description was the same as what I receive. I REALLY REALLY RECOMMEND BUYING FROM TUGCE...I PROMISE...YOU WON’T BE DISAPPOINTED !!!"
+    },
+    {
+      "name": "Mark",
+      "date": "13 July 2025",
+      "rating": 5,
+      "notable": [
+        "Punctuality",
+        "Communication",
+        "Pricing",
+        "Item description"
+      ],
+      "text": ""
+    },
+    {
+      "name": "Julia",
+      "date": "18 July 2025",
+      "rating": 5,
+      "notable": [
+        "Communication"
+      ],
+      "text": ""
+    },
+    {
+      "name": "Cathy",
+      "date": "22 July 2025",
+      "rating": 5,
+      "notable": [
+        "Pricing",
+        "Item description",
+        "Punctuality",
+        "Communication"
+      ],
+      "text": ""
+    },
+    {
+      "name": "Sergio",
+      "date": "24 July 2025",
+      "rating": 5,
+      "notable": [
+        "Communication"
+      ],
+      "text": ""
+    },
+    {
+      "name": "Can",
+      "date": "22 June 2025",
+      "rating": 5,
+      "notable": [
+        "Punctuality",
+        "Communication",
+        "Pricing"
+      ],
+      "text": "It was really delicious. The dishes came warm. The rice meatballs were very good. I will definitely order again. Delivery was very fast.Thank you."
+    },
+    {
+      "name": "Brigitte",
+      "date": "12 July 2025",
+      "rating": 5,
+      "notable": [
+        "Punctuality",
+        "Communication",
+        "Pricing",
+        "Item description"
+      ],
+      "text": "This lasagna is absolutely delicious, said me, the Italian lady! Must try!!"
+    },
+    {
+      "name": "Scott",
+      "date": "4 August 2025",
+      "rating": 5,
+      "notable": [
+        "Punctuality",
+        "Communication",
+        "Pricing",
+        "Item description"
+      ],
+      "text": "Great tiramisu and apple and date cookies. Very punctual and easy to deal with will reorder"
+    },
+    {
+      "name": "Harris",
+      "date": "4 September 2025",
+      "rating": 5,
+      "notable": [
+        "Punctuality",
+        "Communication",
+        "Pricing",
+        "Item description"
+      ],
+      "text": "Bought Authentic Kavala Almond Cookies, those were delicious!"
+    },
+    {
+      "name": "Vandan",
+      "date": "13 November 2025",
+      "rating": 5,
+      "notable": [
+        "Punctuality",
+        "Communication",
+        "Pricing",
+        "Item description"
+      ],
+      "text": "Amazing and delicious!"
+    },
+    {
+      "name": "Thony",
+      "date": "15 December 2025",
+      "rating": 5,
+      "notable": [
+        "Punctuality",
+        "Communication",
+        "Pricing",
+        "Item description"
+      ],
+      "text": "Delicious Tiramisu. Thank you."
+    }
+  ]
+}
