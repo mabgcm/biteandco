@@ -1,7 +1,7 @@
 [
   {
     "id": "belen_tava",
-    "name": "Belen Tava",
+    "name": "Sizzle Valley Beef Bake",
     "description": "Comes with free rice",
     "price": 34,
     "priceDisplay": [
@@ -11,7 +11,7 @@
     ],
     "category": "main",
     "image": "/assets/img/menu/belentava.png",
-    "alt": "Belen Tava steak dish",
+    "alt": "Sizzle Valley beef and pepper bake",
     "ingredients": [
       "Steak",
       "Bell Peppers",
@@ -27,7 +27,7 @@
   },
   {
     "id": "ali_nazik",
-    "name": "Ali Nazik",
+    "name": "Velvet Ember Eggplant Beef",
     "description": "Comes with free rice",
     "price": 32,
     "priceDisplay": [
@@ -37,7 +37,7 @@
     ],
     "category": "main",
     "image": "/assets/img/alinazik.png",
-    "alt": "Ali Nazik with eggplant yogurt and meat",
+    "alt": "Velvet Ember eggplant yogurt with meat",
     "ingredients": [
       "Eggplant",
       "Yogurt",
@@ -54,7 +54,7 @@
   },
   {
     "id": "karniyarik",
-    "name": "Karniyarik",
+    "name": "Hearthline Stuffed Eggplant",
     "description": "Comes with free rice",
     "price": 30,
     "priceDisplay": [
@@ -64,7 +64,7 @@
     ],
     "category": "main",
     "image": "/assets/img/karniyarik1.png",
-    "alt": "Karniyarik stuffed eggplant",
+    "alt": "Hearthline stuffed eggplant",
     "ingredients": [
       "Eggplant",
       "Ground Beef",
@@ -82,7 +82,7 @@
   },
   {
     "id": "taskebabi",
-    "name": "Taskebabi",
+    "name": "Sunday Hearth Beef Stew",
     "description": "Comes with free rice",
     "price": 36,
     "priceDisplay": [
@@ -92,7 +92,7 @@
     ],
     "category": "main",
     "image": "/assets/img/taskebabi.png",
-    "alt": "Taskebabi Turkish beef stew",
+    "alt": "Sunday Hearth beef stew",
     "ingredients": [
       "Beef",
       "Potatoes",
@@ -275,7 +275,7 @@
   },
   {
     "id": "keto_lahmacun",
-    "name": "Keto Lahmacun",
+    "name": "Low-Carb Ember Flatbread",
     "description": "",
     "price": 28,
     "priceDisplay": [
@@ -284,7 +284,7 @@
     ],
     "category": "main",
     "image": "/assets/img/menu/lahmacun.png",
-    "alt": "Keto lahmacun flatbread",
+    "alt": "Low-carb spiced beef flatbread",
     "ingredients": [
       "Keto Flatbread",
       "Ground Beef",
@@ -349,7 +349,7 @@
   },
   {
     "id": "trilece_cake",
-    "name": "Trilece Cake",
+    "name": "Cloud Silk Milk Cake",
     "description": "",
     "price": 40,
     "priceDisplay": [
@@ -358,7 +358,7 @@
     ],
     "category": "desserts",
     "image": "/assets/img/menu/trilece.png",
-    "alt": "Trilece milk cake",
+    "alt": "Cloud Silk milk cake",
     "ingredients": [
       "Milk Cake",
       "Three Milks",
@@ -373,7 +373,7 @@
   },
   {
     "id": "turkish_borek",
-    "name": "Turkish Borek",
+    "name": "Golden Layer Savory Pie",
     "description": "",
     "price": 4,
     "priceDisplay": [
@@ -382,7 +382,7 @@
     ],
     "category": "bakery",
     "image": "/assets/img/menu/borek.png",
-    "alt": "Turkish borek pastry",
+    "alt": "Golden Layer savory pastry",
     "ingredients": [
       "Filo Pastry",
       "Feta Cheese",
@@ -425,7 +425,7 @@
   },
   {
     "id": "turkish_gozleme",
-    "name": "Turkish Gozleme Flatbread",
+    "name": "Hearthfold Spinach Flatbread",
     "description": "",
     "price": 7.5,
     "priceDisplay": [
@@ -433,7 +433,7 @@
     ],
     "category": "bakery",
     "image": "/assets/img/menu/gozleme.png",
-    "alt": "Turkish gozleme flatbread",
+    "alt": "Hearthfold spinach flatbread",
     "ingredients": [
       "Flatbread",
       "Spinach",
@@ -474,7 +474,7 @@
   },
   {
     "id": "kavala_cookies",
-    "name": "Authentic Kavala Almond Cookies",
+    "name": "Almond Snowdrop Cookies",
     "description": "",
     "price": 3.5,
     "priceDisplay": [
@@ -482,7 +482,7 @@
     ],
     "category": "bakery",
     "image": "/assets/img/menu/kavala.png",
-    "alt": "Kavala almond cookies",
+    "alt": "Almond Snowdrop cookies",
     "ingredients": [
       "Almonds",
       "Sugar",

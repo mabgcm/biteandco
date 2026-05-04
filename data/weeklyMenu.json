@@ -60,8 +60,8 @@
     "id": "ground_beef_potato_bake",
     "day": "Wednesday",
     "name": "Ground Beef & Potato Bake",
-    "englishName": "Turkish Style Beef & Potato Casserole",
-    "description": "Layered Turkish-style potato bake with seasoned ground beef, onion, tomato sauce, oil, and spices.",
+    "englishName": "Rustic Beef & Potato Casserole",
+    "description": "Layered potato bake with seasoned ground beef, onion, tomato sauce, oil, and spices.",
     "comesWith": [
       "Side salad"
     ],
@@ -143,9 +143,9 @@
   {
     "id": "belen_tava",
     "day": "Saturday",
-    "name": "Belen Tava",
+    "name": "Sizzle Valley Beef Bake",
     "englishName": "Sizzling Beef & Vegetable Bake",
-    "description": "Turkish beef bake with peppers, onion, tomato sauce, butter, and spices.",
+    "description": "Beef bake with peppers, onion, tomato sauce, butter, and spices.",
     "comesWith": [
       "Butter rice"
     ],
@@ -168,14 +168,14 @@
     },
     "price": 17,
     "photo": "/assets/img/menu/belentava.png",
-    "alt": "Belen Tava sizzling beef and vegetable bake"
+    "alt": "Sizzle Valley sizzling beef and vegetable bake"
   },
   {
     "id": "karniyarik",
     "day": "Friday",
-    "name": "Karniyarik",
+    "name": "Hearthline Stuffed Eggplant",
     "englishName": "Stuffed Eggplant with Ground Beef",
-    "description": "Classic Turkish eggplant stuffed with ground beef, tomato sauce, and onion.",
+    "description": "Eggplant stuffed with ground beef, tomato sauce, and onion.",
     "comesWith": [
       "Rice"
     ],
@@ -196,14 +196,14 @@
     },
     "price": 15,
     "photo": "/assets/img/karniyarik1.png",
-    "alt": "Karniyarik stuffed eggplant with ground beef"
+    "alt": "Hearthline stuffed eggplant with ground beef"
   },
   {
     "id": "taskebabi",
     "day": "Sunday",
-    "name": "Tas Kebabi",
+    "name": "Sunday Hearth Beef Stew",
     "englishName": "Slow-Cooked Beef Stew",
-    "description": "Slow-cooked Turkish beef stew with potato, carrot, tomato base, and onion.",
+    "description": "Slow-cooked beef stew with potato, carrot, tomato base, and onion.",
     "comesWith": [
       "Rice"
     ],
@@ -225,6 +225,6 @@
     },
     "price": 18,
     "photo": "/assets/img/taskebabi.png",
-    "alt": "Tas Kebabi slow-cooked beef stew"
+    "alt": "Sunday Hearth slow-cooked beef stew"
   }
 ]

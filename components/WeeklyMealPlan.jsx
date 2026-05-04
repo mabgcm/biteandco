@@ -4,18 +4,15 @@ import contact from '../data/contact.json';
 import weeklyMenu from '../data/weeklyMenu.json';
 
 const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const prepWindowDays = 2;
 
-function getNextWeekDates() {
+function getUpcomingOrderDates() {
   const today = new Date();
-  const nextMonday = new Date(today);
-  const day = today.getDay();
-  const daysUntilNextMonday = ((8 - day) % 7) || 7;
-  nextMonday.setDate(today.getDate() + daysUntilNextMonday);
-  nextMonday.setHours(0, 0, 0, 0);
+  today.setHours(0, 0, 0, 0);
 
   return Array.from({ length: 7 }, (_, index) => {
-    const date = new Date(nextMonday);
-    date.setDate(nextMonday.getDate() + index);
+    const date = new Date(today);
+    date.setDate(today.getDate() + index + 1);
     return date;
   });
 }
@@ -43,7 +40,7 @@ function formatList(value) {
 export default function WeeklyMealPlan() {
   const [quantities, setQuantities] = useState({});
   const [showError, setShowError] = useState(false);
-  const [nextWeekDates, setNextWeekDates] = useState([]);
+  const [orderDates, setOrderDates] = useState([]);
 
   const weeklyMealsByDay = useMemo(() => {
     return weeklyMenu.reduce((meals, item) => {
@@ -55,12 +52,13 @@ export default function WeeklyMealPlan() {
     }, {});
   }, []);
 
-  const totalMeals = Object.values(quantities).reduce((total, quantity) => total + quantity, 0);
-  const dateRange = nextWeekDates.length > 0
-    ? `${formatDate(nextWeekDates[0])} - ${formatDate(nextWeekDates[nextWeekDates.length - 1])}`
-    : 'Next week';
-  const selectedMeals = nextWeekDates
-    .flatMap((date) => {
+  const dateRange = orderDates.length > 0
+    ? `${formatDate(orderDates[0])} - ${formatDate(orderDates[orderDates.length - 1])}`
+    : 'Upcoming dates';
+  const selectedMeals = orderDates
+    .flatMap((date, dateIndex) => {
+      if (dateIndex < prepWindowDays) return [];
+
       const day = dayNames[date.getDay()];
       const meals = weeklyMealsByDay[day] || [];
       return meals.map(meal => ({
@@ -70,10 +68,11 @@ export default function WeeklyMealPlan() {
       }));
     })
     .filter(item => item.meal && item.quantity > 0);
+  const totalMeals = selectedMeals.reduce((total, item) => total + item.quantity, 0);
   const totalPrice = selectedMeals.reduce((total, item) => total + (item.quantity * Number(item.meal.price || 0)), 0);
 
   useEffect(() => {
-    setNextWeekDates(getNextWeekDates());
+    setOrderDates(getUpcomingOrderDates());
   }, []);
 
   const updateQuantity = (mealId, value) => {
@@ -94,7 +93,7 @@ export default function WeeklyMealPlan() {
     const mealLines = selectedMeals.map(item => `- ${item.day}: ${item.quantity} x ${item.meal.name} ($${Number(item.meal.price || 0).toFixed(2)} each)`);
 
     return [
-      'Hi Bite & Co, I would like to request next week\'s meals:',
+      'Hi Bite & Co, I would like to request upcoming meals:',
       ...mealLines,
       `Estimated total: $${totalPrice.toFixed(2)}`,
       '',
@@ -117,18 +116,18 @@ export default function WeeklyMealPlan() {
     <section id="weekly-meal-plan" className="weekly-shop menu section light-background">
       <div className="container section-title">
         <h2>Weekly Menu</h2>
-        <p><span>Next Week&apos;s</span> <span className="description-title">Home Made Meals</span></p>
+        <p><span>Upcoming</span> <span className="description-title">Home Made Meals</span></p>
       </div>
 
       <div className="container">
         <div className="weekly-shop-header">
           <div>
-            <p className="weekly-shop-eyebrow">One week calendar</p>
+            <p className="weekly-shop-eyebrow">Seven day calendar</p>
             <h3>Order the Menu of the Day</h3>
-            <p className="weekly-shop-note">Select meals for next week only. Choose how many people you are ordering for each day.</p>
+            <p className="weekly-shop-note">Select meals from the upcoming schedule. Availability is limited and closes quickly.</p>
           </div>
           <div className="weekly-shop-range">
-            <span>Next week</span>
+            <span>Upcoming dates</span>
             <strong>{dateRange}</strong>
           </div>
         </div>
@@ -144,12 +143,13 @@ export default function WeeklyMealPlan() {
         ) : null}
 
         <div className="weekly-shop-layout">
-          <div className="weekly-shop-products" aria-label="Next week's menu">
-            {nextWeekDates.map((date) => {
+          <div className="weekly-shop-products" aria-label="Upcoming menu">
+            {orderDates.map((date, dateIndex) => {
               const day = dayNames[date.getDay()];
               const meals = weeklyMealsByDay[day] || [];
+              const isPrepWindow = dateIndex < prepWindowDays;
 
-              if (meals.length === 0) {
+              if (isPrepWindow || meals.length === 0) {
                 return (
                   <article className="weekly-shop-card is-unavailable" key={day}>
                     <div className="weekly-shop-date">
@@ -163,15 +163,15 @@ export default function WeeklyMealPlan() {
 
                     <div className="weekly-shop-info">
                       <p className="weekly-shop-full-date">{formatFullDate(date)}</p>
-                      <h4>Meal to be announced</h4>
-                      <p>Contact us to confirm availability for this day.</p>
+                      <h4>{isPrepWindow ? 'Capacity full' : 'Meal to be announced'}</h4>
+                      <p>{isPrepWindow ? 'We are fully booked for this date.' : 'Contact us to confirm availability for this day.'}</p>
                       <div className="weekly-shop-meta">
-                        <span>Weekly menu</span>
+                        <span>{isPrepWindow ? 'Limited availability' : 'Weekly menu'}</span>
                       </div>
                     </div>
 
                     <div className="weekly-shop-actions">
-                      <span className="weekly-shop-unavailable">Unavailable</span>
+                      <span className="weekly-shop-unavailable">{isPrepWindow ? 'Full' : 'Unavailable'}</span>
                     </div>
                   </article>
                 );
@@ -317,7 +317,7 @@ export default function WeeklyMealPlan() {
               <a href={contact.messengerUrl} className="btn btn-outline-danger btn-lg w-100 mt-2" target="_blank" rel="noopener noreferrer">
                 Message on Facebook
               </a>
-              <p className="weekly-shop-limits">Limited home kitchen availability around Barrie and Simcoe. Orders are scheduled one week in advance.</p>
+              <p className="weekly-shop-limits">Limited home kitchen availability around Barrie and Simcoe. Popular dates fill quickly.</p>
             </div>
           </aside>
         </div>

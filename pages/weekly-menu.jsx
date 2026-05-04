@@ -5,7 +5,7 @@ import Seo from '../components/Seo';
 import WeeklyMealPlan from '../components/WeeklyMealPlan';
 
 const pageTitle = 'Weekly Menu Orders | Bite & Co Barrie & Simcoe';
-const pageDescription = 'Order Bite & Co next week homemade meals by day for one or more people around Barrie and Simcoe.';
+const pageDescription = 'Order Bite & Co upcoming homemade meals by day for one or more people around Barrie and Simcoe.';
 
 export default function WeeklyMenuPage() {
   useEffect(() => {
