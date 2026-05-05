@@ -43,10 +43,9 @@ export default function Navbar({ activeSection, onSectionChange, onShowAll }) {
         <nav id="navmenu" className="navmenu">
           <ul>
             <li><a href={usesSectionMode ? '#hero' : '/#hero'} className={activeSection === 'home' ? 'active' : ''} onClick={(event) => handleNavClick(event, 'home')}>Home</a></li>
-            <li><a href={usesSectionMode ? '#about' : '/#about'} className={activeSection === 'about' ? 'active' : ''} onClick={(event) => handleNavClick(event, 'about')}>About</a></li>
-            <li><a href={usesSectionMode ? '#menu' : '/#menu'} className={activeSection === 'menu' ? 'active' : ''} onClick={(event) => handleNavClick(event, 'menu')}>Menu</a></li>
+            <li><a href={usesSectionMode ? '#shop' : '/#shop'} className={activeSection === 'menu' ? 'active' : ''} onClick={(event) => handleNavClick(event, 'menu')}>Shop</a></li>
             <li><a href="/weekly-menu" className={activeSection === 'weekly-menu' ? 'active' : ''} onClick={closeMobileNav}>Weekly Menu</a></li>
-            <li><a href={usesSectionMode ? '#testimonials' : '/#testimonials'} className={activeSection === 'testimonials' ? 'active' : ''} onClick={(event) => handleNavClick(event, 'testimonials')}>Testimonials</a></li>
+            <li><a href={usesSectionMode ? '#reviews' : '/#reviews'} className={activeSection === 'testimonials' ? 'active' : ''} onClick={(event) => handleNavClick(event, 'testimonials')}>Reviews</a></li>
             <li><a href="/contact" className={activeSection === 'contact' ? 'active' : ''} onClick={closeMobileNav}>Contact</a></li>
           </ul>
           <i
@@ -60,7 +59,7 @@ export default function Navbar({ activeSection, onSectionChange, onShowAll }) {
             }}
           />
         </nav>
-        <a className="btn btn-danger btn-sm" href="sms:14372196444">Contact to Order</a>
+        <a className="btn btn-danger btn-sm" href="sms:14372196444">Order Now</a>
       </div>
     </header>
   );

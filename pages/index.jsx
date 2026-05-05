@@ -1,123 +1,92 @@
-import { useCallback, useEffect, useState } from 'react';
-import About from '../components/About';
+import { useEffect, useMemo, useState } from 'react';
+import Bestsellers from '../components/home/Bestsellers';
+import FinalCTA from '../components/home/FinalCTA';
+import HomeHero from '../components/home/HomeHero';
+import ProductOrderModal from '../components/home/ProductOrderModal';
+import SocialProof from '../components/home/SocialProof';
+import ValueStrip from '../components/home/ValueStrip';
+import WeeklyMeals from '../components/home/WeeklyMeals';
 import Footer from '../components/Footer';
-import Hero from '../components/Hero';
-import Menu from '../components/Menu';
 import Navbar from '../components/Navbar';
 import Seo from '../components/Seo';
-import Testimonials from '../components/Testimonials';
-import WeeklyMenuCTA from '../components/WeeklyMenuCTA';
+import contact from '../data/contact.json';
+import homepage from '../data/homepage.json';
 import menuItems from '../data/menu.json';
+import weeklyMenu from '../data/weeklyMenu.json';
 
-const pageTitle = 'Bite & Co | Homemade Turkish Meals in Barrie & Simcoe';
-const pageDescription = 'Bite & Co offers limited homemade Turkish meals, desserts, bakery items, and halal dishes around Barrie and Simcoe. Contact us at least one day ahead to schedule.';
+const pageTitle = 'Bite & Co | Fresh Homemade Meals in Barrie & Simcoe';
+const pageDescription = 'Shop fresh homemade meals from Bite & Co. Cooked fresh, never frozen, and available by scheduled order around Barrie and Simcoe.';
 
 const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'FoodEstablishment',
   name: 'Bite & Co',
   url: 'https://biteandco.ca/',
-  image: 'https://biteandco.ca/assets/img/menu/tiramisu.png',
-  description: 'Limited homemade Turkish meals, desserts, bakery items, and halal dishes around Barrie and Simcoe, made fresh by request with at least one day advance notice.',
-  telephone: '+14372196444',
+  image: 'https://biteandco.ca/assets/img/menu/ovenchicken.png',
+  description: pageDescription,
+  telephone: contact.phone,
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Barrie',
     addressRegion: 'ON',
     addressCountry: 'CA'
   },
-  areaServed: [
-    {
-      '@type': 'City',
-      name: 'Barrie'
-    },
-    {
-      '@type': 'AdministrativeArea',
-      name: 'Simcoe County'
-    }
-  ],
-  servesCuisine: ['Turkish', 'Homemade', 'Halal', 'Dessert', 'Bakery'],
+  areaServed: ['Barrie', 'Simcoe County'],
+  servesCuisine: ['Homemade', 'Turkish', 'Halal'],
   priceRange: '$$',
-  sameAs: [
-    'https://www.facebook.com/profile.php?id=61575647294934',
-    'https://www.instagram.com/biteandco.ca/'
-  ],
   hasMenu: {
     '@type': 'Menu',
-    url: 'https://biteandco.ca/#menu',
-    hasMenuSection: ['main', 'desserts', 'bakery', 'snacks'].map(category => ({
-      '@type': 'MenuSection',
-      name: {
-        main: 'Main Dishes',
-        desserts: 'Desserts',
-        bakery: 'Bakery',
-        snacks: 'Snacks'
-      }[category],
-      hasMenuItem: menuItems
-        .filter(item => item.category === category)
-        .map(item => ({
-          '@type': 'MenuItem',
-          name: item.name
-        }))
+    url: 'https://biteandco.ca/#shop',
+    hasMenuItem: menuItems.map(item => ({
+      '@type': 'MenuItem',
+      name: item.name,
+      image: `https://biteandco.ca${item.image}`,
+      offers: {
+        '@type': 'Offer',
+        price: item.price,
+        priceCurrency: 'CAD'
+      }
     }))
   },
   potentialAction: {
-    '@type': 'ContactAction',
-    target: 'sms:+14372196444'
+    '@type': 'OrderAction',
+    target: contact.smsHref
   }
 };
 
+function byIds(items, ids) {
+  return ids
+    .map(id => items.find(item => item.id === id))
+    .filter(Boolean);
+}
+
 export default function Home() {
-  const [activeSection, setActiveSection] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   useEffect(() => {
     document.body.classList.add('index-page');
     return () => document.body.classList.remove('index-page');
   }, []);
 
-  const showSection = useCallback((section) => {
-    setActiveSection(section);
-    window.setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
-  }, []);
-
-  const showAllSections = useCallback(() => {
-    setActiveSection(null);
-    window.setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
-  }, []);
-
-  const renderMainContent = () => {
-    if (activeSection === 'home') return <Hero />;
-    if (activeSection === 'about') return <About />;
-    if (activeSection === 'menu') {
-      return (
-        <>
-          <Menu />
-        </>
-      );
-    }
-    if (activeSection === 'testimonials') return <Testimonials />;
-
-    return (
-      <>
-        <Hero />
-        <About />
-        <Menu />
-        <WeeklyMenuCTA />
-        <Testimonials />
-      </>
-    );
-  };
+  const bestsellers = useMemo(() => byIds(menuItems, homepage.bestsellerIds), []);
+  const weeklyMeals = useMemo(() => byIds(weeklyMenu, homepage.weeklyMealIds).slice(0, 5), []);
 
   return (
     <>
-      <Seo title={pageTitle} description={pageDescription}>
+      <Seo title={pageTitle} description={pageDescription} image="https://biteandco.ca/assets/img/menu/ovenchicken.png">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </Seo>
 
-      <Navbar activeSection={activeSection} onSectionChange={showSection} onShowAll={showAllSections} />
-      <main className="main">
-        {renderMainContent()}
+      <Navbar />
+      <main className="main shop-home">
+        <HomeHero hero={homepage.hero} orderHref={contact.smsHref} />
+        <Bestsellers products={bestsellers} onOrder={setSelectedProduct} />
+        <ValueStrip items={homepage.valueStrip} />
+        <WeeklyMeals meals={weeklyMeals} onOrder={setSelectedProduct} />
+        <SocialProof />
+        <FinalCTA content={homepage.finalCta} orderHref={contact.smsHref} />
       </main>
+      <ProductOrderModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
       <Footer />
     </>
   );

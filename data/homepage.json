@@ -1,0 +1,54 @@
+{
+  "hero": {
+    "headline": "Fresh Homemade Meals",
+    "lines": [
+      "Cooked today. Delivered fresh.",
+      "Never frozen. Ready in hours."
+    ],
+    "ctaLabel": "Order Now",
+    "badge": "Limited Availability",
+    "image": "/assets/img/menu/ovenchicken.png",
+    "alt": "Baked chicken and potatoes homemade meal"
+  },
+  "bestsellerIds": [
+    "baked_chicken_potatoes",
+    "meatballs_potatoes",
+    "baked_beef_mac_cheese",
+    "stuffed_bell_peppers"
+  ],
+  "valueStrip": [
+    {
+      "icon": "bi-house-heart",
+      "label": "Real Homemade Food"
+    },
+    {
+      "icon": "bi-fire",
+      "label": "Cooked Fresh Daily"
+    },
+    {
+      "icon": "bi-snow2",
+      "label": "Never Frozen"
+    }
+  ],
+  "weeklyMealIds": [
+    "meatballs_potatoes",
+    "stuffed_bell_peppers",
+    "ground_beef_potato_bake",
+    "baked_chicken_potatoes",
+    "karniyarik"
+  ],
+  "testimonials": [
+    {
+      "quote": "Tastes like home",
+      "name": "Can"
+    },
+    {
+      "quote": "Fresh and delicious",
+      "name": "Vandan"
+    }
+  ],
+  "finalCta": {
+    "headline": "Ready to eat better this week?",
+    "ctaLabel": "Order Your Meals"
+  }
+}
