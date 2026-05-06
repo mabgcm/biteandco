@@ -36,7 +36,7 @@ const structuredData = {
   priceRange: '$$',
   hasMenu: {
     '@type': 'Menu',
-    url: 'https://biteandco.ca/#shop',
+    url: 'https://biteandco.ca/menu',
     hasMenuItem: menuItems.map(item => ({
       '@type': 'MenuItem',
       name: item.name,
@@ -68,8 +68,20 @@ export default function Home() {
     return () => document.body.classList.remove('index-page');
   }, []);
 
-  const bestsellers = useMemo(() => byIds(menuItems, homepage.bestsellerIds), []);
   const weeklyMeals = useMemo(() => byIds(weeklyMenu, homepage.weeklyMealIds).slice(0, 5), []);
+  const heroImages = useMemo(() => {
+    const uniqueImages = new Map();
+
+    menuItems.forEach(item => {
+      if (!item.image || uniqueImages.has(item.image)) return;
+      uniqueImages.set(item.image, {
+        src: item.image,
+        alt: item.alt || item.name
+      });
+    });
+
+    return Array.from(uniqueImages.values());
+  }, []);
 
   return (
     <>
@@ -79,10 +91,10 @@ export default function Home() {
 
       <Navbar />
       <main className="main shop-home">
-        <HomeHero hero={homepage.hero} orderHref={contact.smsHref} />
-        <Bestsellers products={bestsellers} onOrder={setSelectedProduct} />
+        <HomeHero hero={homepage.hero} orderHref={contact.smsHref} images={heroImages} />
+        <Bestsellers products={menuItems} onOrder={setSelectedProduct} />
         <ValueStrip items={homepage.valueStrip} />
-        <WeeklyMeals meals={weeklyMeals} onOrder={setSelectedProduct} />
+        <WeeklyMeals meals={weeklyMeals} />
         <SocialProof />
         <FinalCTA content={homepage.finalCta} orderHref={contact.smsHref} />
       </main>

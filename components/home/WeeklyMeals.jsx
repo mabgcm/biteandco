@@ -1,4 +1,4 @@
-export default function WeeklyMeals({ meals, onOrder }) {
+export default function WeeklyMeals({ meals }) {
   return (
     <section id="weekly" className="shop-section shop-weekly">
       <div className="shop-section-heading shop-section-heading-row">
@@ -8,15 +8,17 @@ export default function WeeklyMeals({ meals, onOrder }) {
       <div className="shop-weekly-row" tabIndex="0" aria-label="This week's meals">
         {meals.map(meal => (
           <article className="shop-weekly-card" key={meal.id}>
-            <button type="button" className="shop-weekly-image" onClick={() => onOrder(meal)} aria-label={`View ${meal.name} details`}>
-              <img src={meal.photo || meal.image} alt={meal.alt || meal.name} loading="lazy" />
-            </button>
-            <div>
-              {meal.day ? <span>{meal.day}</span> : null}
-              <h3>{meal.name}</h3>
-              <strong>${Number(meal.price).toFixed(2)}</strong>
-              <button type="button" className="shop-order-link" onClick={() => onOrder(meal)}>Order <span aria-hidden="true">→</span></button>
-            </div>
+            <a href="/weekly-menu" className="shop-weekly-link" aria-label={`View weekly menu for ${meal.name}`}>
+              <span className="shop-weekly-image" aria-hidden="true">
+                <img src={meal.photo || meal.image} alt="" loading="lazy" />
+              </span>
+              <span className="shop-weekly-body">
+                {meal.day ? <span className="shop-weekly-day">{meal.day}</span> : null}
+                <h3>{meal.name}</h3>
+                <strong>${Number(meal.price).toFixed(2)}</strong>
+                <span className="shop-order-link">Order <span aria-hidden="true">→</span></span>
+              </span>
+            </a>
           </article>
         ))}
       </div>

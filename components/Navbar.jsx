@@ -43,7 +43,7 @@ export default function Navbar({ activeSection, onSectionChange, onShowAll }) {
         <nav id="navmenu" className="navmenu">
           <ul>
             <li><a href={usesSectionMode ? '#hero' : '/#hero'} className={activeSection === 'home' ? 'active' : ''} onClick={(event) => handleNavClick(event, 'home')}>Home</a></li>
-            <li><a href={usesSectionMode ? '#shop' : '/#shop'} className={activeSection === 'menu' ? 'active' : ''} onClick={(event) => handleNavClick(event, 'menu')}>Shop</a></li>
+            <li><a href="/menu" className={activeSection === 'menu' ? 'active' : ''} onClick={closeMobileNav}>Menu</a></li>
             <li><a href="/weekly-menu" className={activeSection === 'weekly-menu' ? 'active' : ''} onClick={closeMobileNav}>Weekly Menu</a></li>
             <li><a href={usesSectionMode ? '#reviews' : '/#reviews'} className={activeSection === 'testimonials' ? 'active' : ''} onClick={(event) => handleNavClick(event, 'testimonials')}>Reviews</a></li>
             <li><a href="/contact" className={activeSection === 'contact' ? 'active' : ''} onClick={closeMobileNav}>Contact</a></li>
