@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
-import Bestsellers from '../components/home/Bestsellers';
+import Bakery from '../components/home/Bakery';
+import Desserts from '../components/home/Desserts';
 import FinalCTA from '../components/home/FinalCTA';
 import HomeHero from '../components/home/HomeHero';
+import MainDishes from '../components/home/MainDishes';
 import ProductOrderModal from '../components/home/ProductOrderModal';
 import SocialProof from '../components/home/SocialProof';
 import ValueStrip from '../components/home/ValueStrip';
@@ -60,6 +62,8 @@ function byIds(items, ids) {
     .filter(Boolean);
 }
 
+const weeklyDayOrder = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
 export default function Home() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -68,7 +72,15 @@ export default function Home() {
     return () => document.body.classList.remove('index-page');
   }, []);
 
-  const weeklyMeals = useMemo(() => byIds(weeklyMenu, homepage.weeklyMealIds).slice(0, 5), []);
+  const mainDishProducts = useMemo(() => menuItems.filter(item => item.category === 'main'), []);
+  const dessertProducts = useMemo(() => menuItems.filter(item => item.category === 'desserts'), []);
+  const bakeryProducts = useMemo(() => menuItems.filter(item => item.category === 'bakery'), []);
+  const weeklyMeals = useMemo(() => {
+    return weeklyMenu
+      .filter(item => item.day)
+      .sort((first, second) => weeklyDayOrder.indexOf(first.day) - weeklyDayOrder.indexOf(second.day))
+      .slice(0, 7);
+  }, []);
   const heroImages = useMemo(() => {
     const uniqueImages = new Map();
 
@@ -92,7 +104,9 @@ export default function Home() {
       <Navbar />
       <main className="main shop-home">
         <HomeHero hero={homepage.hero} orderHref={contact.smsHref} images={heroImages} />
-        <Bestsellers products={menuItems} onOrder={setSelectedProduct} />
+        <MainDishes products={mainDishProducts} onOrder={setSelectedProduct} />
+        <Desserts products={dessertProducts} onOrder={setSelectedProduct} />
+        <Bakery products={bakeryProducts} onOrder={setSelectedProduct} />
         <ValueStrip items={homepage.valueStrip} />
         <WeeklyMeals meals={weeklyMeals} />
         <SocialProof />

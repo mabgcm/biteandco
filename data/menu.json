@@ -2,7 +2,7 @@
   {
     "id": "belen_tava",
     "name": "Sizzle Valley Beef Bake",
-    "description": "Comes with free rice",
+    "description": "Solo main dish. Sides are not included.",
     "price": 34,
     "priceDisplay": [
       "$34.00/2 servings",
@@ -28,7 +28,7 @@
   {
     "id": "ali_nazik",
     "name": "Velvet Ember Eggplant Beef",
-    "description": "Comes with free rice",
+    "description": "Solo main dish. Sides are not included.",
     "price": 32,
     "priceDisplay": [
       "$32.00/2 servings",
@@ -55,7 +55,7 @@
   {
     "id": "karniyarik",
     "name": "Hearthline Stuffed Eggplant",
-    "description": "Comes with free rice",
+    "description": "Solo main dish. Sides are not included.",
     "price": 30,
     "priceDisplay": [
       "$30.00/2 servings",
@@ -83,7 +83,7 @@
   {
     "id": "taskebabi",
     "name": "Sunday Hearth Beef Stew",
-    "description": "Comes with free rice",
+    "description": "Solo main dish. Sides are not included.",
     "price": 36,
     "priceDisplay": [
       "$36.00/2 servings",
@@ -111,7 +111,7 @@
   {
     "id": "meatballs_potatoes",
     "name": "Meatballs with Potatoes",
-    "description": "Comes with free rice",
+    "description": "Solo main dish. Sides are not included.",
     "price": 30,
     "priceDisplay": [
       "$30.00/2 servings",
@@ -137,7 +137,7 @@
   {
     "id": "baked_chicken_potatoes",
     "name": "Baked Chicken & Potatoes",
-    "description": "Comes with free rice",
+    "description": "Solo main dish. Sides are not included.",
     "price": 28,
     "priceDisplay": [
       "$28.00/2 servings",
@@ -163,7 +163,7 @@
   {
     "id": "baked_beef_mac_cheese",
     "name": "Baked Beef Mac & Cheese",
-    "description": "Comes with side garden salad",
+    "description": "Solo main dish. Sides are not included.",
     "price": 32,
     "priceDisplay": [
       "$32.00/2 servings",
@@ -193,7 +193,7 @@
   {
     "id": "stuffed_bell_peppers",
     "name": "Stuffed Bell Peppers (Beef & Rice)",
-    "description": "Comes with yogurt sauce",
+    "description": "Solo main dish. Sides are not included.",
     "price": 32,
     "priceDisplay": [
       "$32.00/2 servings",
@@ -221,7 +221,7 @@
   {
     "id": "ground_beef_potato_bake",
     "name": "Ground Beef & Potato Bake",
-    "description": "Comes with side salad",
+    "description": "Solo main dish. Sides are not included.",
     "price": 30,
     "priceDisplay": [
       "$30.00/2 servings",

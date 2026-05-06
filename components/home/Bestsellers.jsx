@@ -1,10 +1,5 @@
-import ProductCard from './ProductCard';
-
 const categories = [
-  { id: 'main', label: 'Main Dishes' },
-  { id: 'desserts', label: 'Desserts' },
-  { id: 'bakery', label: 'Bakery' },
-  { id: 'snacks', label: 'Snacks' }
+  { id: 'desserts', label: 'Desserts' }
 ];
 
 export default function Bestsellers({ products, onOrder }) {
@@ -30,13 +25,30 @@ export default function Bestsellers({ products, onOrder }) {
               <span>{category.products.length} items</span>
             </div>
             <div
-              className="shop-category-row"
+              className="shop-weekly-row"
               tabIndex="0"
               aria-label={category.label}
             >
-              {category.products.map(product => (
-                <ProductCard key={product.id} product={product} onOrder={onOrder} />
-              ))}
+              {category.products.map(product => {
+                const image = product.image || product.photo;
+                const price = product.priceDisplay?.[0] || `$${Number(product.price).toFixed(2)}`;
+
+                return (
+                  <article className="shop-weekly-card" key={product.id}>
+                    <button type="button" className="shop-weekly-link shop-category-product-button" onClick={() => onOrder(product)} aria-label={`View ${product.name} details`}>
+                      <span className="shop-weekly-image" aria-hidden="true">
+                        <img src={image} alt="" loading="lazy" />
+                      </span>
+                      <span className="shop-weekly-body">
+                        <span className="shop-weekly-day">{category.label}</span>
+                        <h3>{product.name}</h3>
+                        <strong>{price}</strong>
+                        <span className="shop-order-link">Order <span aria-hidden="true">→</span></span>
+                      </span>
+                    </button>
+                  </article>
+                );
+              })}
             </div>
           </div>
         ))}

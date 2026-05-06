@@ -29,7 +29,7 @@ export default function HomeHero({ hero, orderHref, images = [] }) {
         <div className="shop-hero-lines">
           {hero.lines.map(line => <p key={line}>{line}</p>)}
         </div>
-        <a href={orderHref} className="shop-button shop-button-dark">{hero.ctaLabel}</a>
+        <a href={orderHref} className="shop-button shop-button-red">{hero.ctaLabel}</a>
       </div>
       <div className="shop-hero-image">
         <img key={activeImage.src} src={activeImage.src} alt={activeImage.alt} />
