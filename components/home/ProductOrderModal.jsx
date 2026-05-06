@@ -47,7 +47,6 @@ export default function ProductOrderModal({ product, onClose }) {
 
   const detailRows = [
     product.day ? { label: 'Day', value: product.day } : null,
-    product.description ? { label: 'Details', value: product.description } : null,
     product.comesWith?.length ? { label: 'Comes with', value: product.comesWith.join(', ') } : null,
     product.ingredients?.length ? { label: 'Ingredients', value: product.ingredients.join(', ') } : null
   ].filter(Boolean);
