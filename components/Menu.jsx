@@ -1,14 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 import ImageLightbox from './ImageLightbox';
 import contact from '../data/contact.json';
+import { getMenuCategoryFallbackImage, visibleMenuCategories as categories } from '../data/menuCategories';
 import menuItems from '../data/menu.json';
-
-const categories = [
-  { id: 'main', label: 'Main Dishes' },
-  { id: 'desserts', label: 'Desserts' },
-  { id: 'bakery', label: 'Bakery' },
-  { id: 'snacks', label: 'Snacks' }
-];
 
 const timeSlots = [
   '10:00 AM - 12:00 PM',
@@ -176,6 +170,7 @@ export default function Menu() {
                           title={item.name}
                           triggerClassName="menu-image-button"
                           imageClassName="menu-img img-fluid"
+                          fallbackSrc={getMenuCategoryFallbackImage(item.category)}
                         />
                         <h4>{item.name}</h4>
                         <p className="ingredients">{item.ingredients.join(', ')}</p>

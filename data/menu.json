@@ -520,5 +520,375 @@
       "carbs": 12,
       "fat": 4
     }
+  },
+  {
+    "id": "baked_chicken_wings",
+    "name": "Firepit Chicken Wings & Spiced Baby Potatoes (Fırında Tavuk Kanat)",
+    "description": "Oven-baked seasoned chicken wings served with herb-spiced baby potatoes. Solo main dish. Sides are not included.",
+    "price": 30,
+    "priceDisplay": [
+      "$30.00/2 servings",
+      "$56.00/4 servings",
+      "$80.00/6 servings"
+    ],
+    "category": "main",
+    "image": "/assets/img/menu/chickenwings.png",
+    "alt": "Baked chicken wings with spiced baby potatoes",
+    "ingredients": [
+      "Chicken Wings",
+      "Baby Potatoes",
+      "Olive Oil",
+      "Garlic",
+      "Spices",
+      "Fresh Herbs"
+    ],
+    "nutrition": {
+      "calories": 680,
+      "protein": 44,
+      "carbs": 38,
+      "fat": 36
+    }
+  },
+  {
+    "id": "roasted_veggie_mix",
+    "name": "Garden Ember Roast (Fırında Karışık Kızartma)",
+    "description": "Oven-roasted eggplant, potato, pepper and zucchini. Choose your sauce: garlic yogurt or garlic tomato.",
+    "price": 24,
+    "priceDisplay": [
+      "$24.00/2 servings",
+      "$44.00/4 servings",
+      "$62.00/6 servings"
+    ],
+    "category": "sides",
+    "image": "/assets/img/menu/roastedveggies.png",
+    "alt": "Oven-roasted mixed vegetables with garlic yogurt or tomato sauce",
+    "ingredients": [
+      "Eggplant",
+      "Potatoes",
+      "Bell Peppers",
+      "Zucchini",
+      "Olive Oil",
+      "Garlic",
+      "Yogurt or Crushed Tomato",
+      "Spices"
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": 8,
+      "carbs": 42,
+      "fat": 14
+    }
+  },
+  {
+    "id": "zucchini_rice",
+    "name": "Dill & Zucchini Rice (Kabak Sıyırma)",
+    "description": "Light and fresh grated zucchini with rice, dill, spring onion and olive oil. Vegan & gluten-free.",
+    "price": 18,
+    "priceDisplay": [
+      "$18.00/2 servings",
+      "$32.00/4 servings",
+      "$46.00/6 servings"
+    ],
+    "category": "sides",
+    "image": "/assets/img/menu/kabaksiyirma.png",
+    "alt": "Zucchini and rice with dill and spring onion",
+    "ingredients": [
+      "Zucchini",
+      "Rice",
+      "Fresh Dill",
+      "Spring Onion",
+      "Olive Oil",
+      "Salt"
+    ],
+    "nutrition": {
+      "calories": 280,
+      "protein": 6,
+      "carbs": 44,
+      "fat": 9
+    }
+  },
+  {
+    "id": "carrot_tarator",
+    "name": "Sunshine Carrot Dip (Havuç Tarator)",
+    "description": "Shredded carrots blended with yogurt, olive oil and salt. A light, refreshing mezze. Vegetarian & gluten-free.",
+    "price": 14,
+    "priceDisplay": [
+      "$14.00/2 servings",
+      "$24.00/4 servings",
+      "$34.00/6 servings"
+    ],
+    "category": "mezze",
+    "image": "/assets/img/menu/havuctarator.png",
+    "alt": "Carrot tarator dip with yogurt and olive oil",
+    "ingredients": [
+      "Carrots",
+      "Yogurt",
+      "Olive Oil",
+      "Salt"
+    ],
+    "nutrition": {
+      "calories": 160,
+      "protein": 5,
+      "carbs": 18,
+      "fat": 8
+    }
+  },
+  {
+    "id": "purple_cabbage_salad",
+    "name": "Rainbow Slaw (Mor Lahana Salatası)",
+    "description": "Vibrant purple cabbage, carrots, corn, beet and greens tossed in olive oil and lemon. Vegan & gluten-free.",
+    "price": 18,
+    "priceDisplay": [
+      "$18.00/2 servings",
+      "$32.00/4 servings",
+      "$46.00/6 servings"
+    ],
+    "category": "salads",
+    "image": "/assets/img/menu/morlahana.png",
+    "alt": "Purple cabbage rainbow slaw with carrots, corn and beet",
+    "ingredients": [
+      "Purple Cabbage",
+      "Carrots",
+      "Corn",
+      "Beet",
+      "Mixed Greens",
+      "Olive Oil",
+      "Lemon",
+      "Salt"
+    ],
+    "nutrition": {
+      "calories": 190,
+      "protein": 4,
+      "carbs": 28,
+      "fat": 8
+    }
+  },
+  {
+    "id": "broccoli_lemon_salad",
+    "name": "Zesty Broccoli Salad (Brokoli Salatası)",
+    "description": "Fresh broccoli with roasted garlic, lemon juice and zest, finished with olive oil. Vegan & gluten-free.",
+    "price": 16,
+    "priceDisplay": [
+      "$16.00/2 servings",
+      "$28.00/4 servings",
+      "$40.00/6 servings"
+    ],
+    "category": "salads",
+    "image": "/assets/img/menu/broccolisalad.png",
+    "alt": "Broccoli salad with garlic and lemon",
+    "ingredients": [
+      "Broccoli",
+      "Garlic",
+      "Lemon Juice",
+      "Lemon Zest",
+      "Olive Oil"
+    ],
+    "nutrition": {
+      "calories": 170,
+      "protein": 6,
+      "carbs": 16,
+      "fat": 10
+    }
+  },
+  {
+    "id": "broccoli_roasted_veggie_salad",
+    "name": "Power Veggie Salad",
+    "description": "Hearty mix of broccoli, roasted red pepper, corn, beet and carrot. Vegan & gluten-free.",
+    "price": 18,
+    "priceDisplay": [
+      "$18.00/2 servings",
+      "$32.00/4 servings",
+      "$46.00/6 servings"
+    ],
+    "category": "salads",
+    "image": "/assets/img/menu/powerveggiesalad.png",
+    "alt": "Broccoli and roasted veggie power salad",
+    "ingredients": [
+      "Broccoli",
+      "Roasted Red Pepper",
+      "Corn",
+      "Beet",
+      "Carrot",
+      "Olive Oil"
+    ],
+    "nutrition": {
+      "calories": 200,
+      "protein": 6,
+      "carbs": 30,
+      "fat": 7
+    }
+  },
+  {
+    "id": "beet_bulgur_salad",
+    "name": "Ruby Grain Salad (Pancar Bulgur Salatası)",
+    "description": "Nutty bulgur with roasted beet, fresh parsley, walnuts and pomegranate arils. Vegan.",
+    "price": 18,
+    "priceDisplay": [
+      "$18.00/2 servings",
+      "$32.00/4 servings",
+      "$46.00/6 servings"
+    ],
+    "category": "salads",
+    "image": "/assets/img/menu/beetbulgursalad.png",
+    "alt": "Beet and bulgur salad with walnuts and pomegranate",
+    "ingredients": [
+      "Bulgur",
+      "Beet",
+      "Parsley",
+      "Walnuts",
+      "Pomegranate Arils",
+      "Olive Oil",
+      "Lemon"
+    ],
+    "nutrition": {
+      "calories": 290,
+      "protein": 9,
+      "carbs": 42,
+      "fat": 11
+    }
+  },
+  {
+    "id": "bulgur_pilaf",
+    "name": "Tomato Bulgur Pilaf (Bulgur Pilavı)",
+    "description": "Classic Turkish-style bulgur pilaf with onion, crushed tomato and pepper. Vegan.",
+    "price": 14,
+    "priceDisplay": [
+      "$14.00/2 servings",
+      "$24.00/4 servings",
+      "$34.00/6 servings"
+    ],
+    "category": "sides",
+    "image": "/assets/img/menu/bulgurpilav.png",
+    "alt": "Turkish tomato bulgur pilaf",
+    "ingredients": [
+      "Bulgur",
+      "Onion",
+      "Crushed Tomato",
+      "Bell Pepper",
+      "Olive Oil",
+      "Spices"
+    ],
+    "nutrition": {
+      "calories": 310,
+      "protein": 9,
+      "carbs": 54,
+      "fat": 7
+    }
+  },
+  {
+    "id": "cauliflower_kisir",
+    "name": "Cauliflower Kisir (Karnabahar Kısırı)",
+    "description": "A fresh twist on Turkish kisir — cauliflower with cucumber, tomato, parsley, dill, tomato paste, olive oil and herbs. Vegan & gluten-free.",
+    "price": 18,
+    "priceDisplay": [
+      "$18.00/2 servings",
+      "$32.00/4 servings",
+      "$46.00/6 servings"
+    ],
+    "category": "salads",
+    "image": "/assets/img/menu/cauliflowerkisir.png",
+    "alt": "Cauliflower kisir salad with fresh herbs",
+    "ingredients": [
+      "Cauliflower",
+      "Cucumber",
+      "Tomato",
+      "Parsley",
+      "Dill",
+      "Tomato Paste",
+      "Olive Oil",
+      "Herbs & Spices"
+    ],
+    "nutrition": {
+      "calories": 180,
+      "protein": 5,
+      "carbs": 22,
+      "fat": 9
+    }
+  },
+  {
+    "id": "fellah_kofte",
+    "name": "Poached Bulgur Balls in Tomato (Fellah Köftesi)",
+    "description": "Traditional bulgur and egg dumplings simmered in garlicky crushed tomato sauce. Vegetarian.",
+    "price": 22,
+    "priceDisplay": [
+      "$22.00/2 servings",
+      "$40.00/4 servings",
+      "$58.00/6 servings"
+    ],
+    "category": "main",
+    "image": "/assets/img/menu/fellahkofte.png",
+    "alt": "Fellah koftesi bulgur balls in tomato garlic sauce",
+    "ingredients": [
+      "Bulgur",
+      "Egg",
+      "Flour",
+      "Crushed Tomato",
+      "Garlic",
+      "Spices"
+    ],
+    "nutrition": {
+      "calories": 360,
+      "protein": 14,
+      "carbs": 52,
+      "fat": 11
+    }
+  },
+  {
+    "id": "halal_salami_pizza",
+    "name": "Halal Salami & Pepperoni Pizza",
+    "description": "Homemade pizza with halal salami, pepperoni, mushrooms and bell peppers on a tomato base with mozzarella.",
+    "price": 22,
+    "priceDisplay": [
+      "$22.00/small (10\")",
+      "$34.00/medium (12\")",
+      "$46.00/large (14\")"
+    ],
+    "category": "bakery",
+    "image": "/assets/img/menu/halalpiazza.png",
+    "alt": "Halal salami and pepperoni pizza with mushroom and pepper",
+    "ingredients": [
+      "Pizza Dough",
+      "Halal Salami",
+      "Halal Pepperoni",
+      "Mushrooms",
+      "Bell Peppers",
+      "Tomato Sauce",
+      "Mozzarella"
+    ],
+    "nutrition": {
+      "calories": 580,
+      "protein": 28,
+      "carbs": 58,
+      "fat": 24
+    }
+  },
+  {
+    "id": "veggie_pizza",
+    "name": "Garden Veggie Pizza",
+    "description": "Fresh homemade pizza loaded with seasonal vegetables on a tomato base with mozzarella. Vegetarian.",
+    "price": 20,
+    "priceDisplay": [
+      "$20.00/small (10\")",
+      "$30.00/medium (12\")",
+      "$42.00/large (14\")"
+    ],
+    "category": "bakery",
+    "image": "/assets/img/menu/veggpizza.png",
+    "alt": "Garden vegetable pizza",
+    "ingredients": [
+      "Pizza Dough",
+      "Bell Peppers",
+      "Mushrooms",
+      "Zucchini",
+      "Olives",
+      "Tomato Sauce",
+      "Mozzarella"
+    ],
+    "nutrition": {
+      "calories": 480,
+      "protein": 18,
+      "carbs": 62,
+      "fat": 16
+    }
   }
 ]

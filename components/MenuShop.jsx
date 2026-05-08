@@ -1,23 +1,12 @@
 import { useMemo, useState } from 'react';
 import ImageLightbox from './ImageLightbox';
 import contact from '../data/contact.json';
+import categories, { getMenuCategoryFallbackImage, getMenuCategoryLabel } from '../data/menuCategories';
 import menuItems from '../data/menu.json';
-
-const categories = [
-  { id: 'all', label: 'All Items', icon: 'bi-grid' },
-  { id: 'main', label: 'Main Dishes', icon: 'bi-egg-fried' },
-  { id: 'desserts', label: 'Desserts', icon: 'bi-cake2' },
-  { id: 'bakery', label: 'Bakery', icon: 'bi-basket' },
-  { id: 'snacks', label: 'Snacks', icon: 'bi-stars' }
-];
 
 function parsePrice(priceLine) {
   const match = priceLine.match(/\$([\d.]+)/);
   return match ? Number(match[1]) : 0;
-}
-
-function formatCategory(categoryId) {
-  return categories.find(category => category.id === categoryId)?.label || 'Menu';
 }
 
 function searchableText(item) {
@@ -25,6 +14,7 @@ function searchableText(item) {
     item.name,
     item.description,
     item.category,
+    getMenuCategoryLabel(item.category),
     ...(item.ingredients || [])
   ].filter(Boolean).join(' ').toLowerCase();
 }
@@ -168,7 +158,7 @@ export default function MenuShop() {
           <div>
             <div className="menu-shop-results">
               <span>{filteredItems.length} items</span>
-              {normalizedQuery ? <strong>Search: "{query.trim()}"</strong> : <strong>{formatCategory(activeCategory)}</strong>}
+              {normalizedQuery ? <strong>Search: "{query.trim()}"</strong> : <strong>{getMenuCategoryLabel(activeCategory)}</strong>}
             </div>
 
             {filteredItems.length > 0 ? (
@@ -185,8 +175,9 @@ export default function MenuShop() {
                           alt={item.alt || item.name}
                           title={item.name}
                           triggerClassName="menu-shop-image-button"
+                          fallbackSrc={getMenuCategoryFallbackImage(item.category)}
                         />
-                        <span>{formatCategory(item.category)}</span>
+                        <span>{getMenuCategoryLabel(item.category)}</span>
                       </div>
                       <div className="menu-shop-body">
                         <div>

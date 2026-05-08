@@ -6,10 +6,20 @@ export default function ImageLightbox({
   title,
   triggerClassName = '',
   imageClassName = '',
-  loading = 'lazy'
+  loading = 'lazy',
+  fallbackSrc = '/assets/img/menu/menu-item-1.png'
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentSrc, setCurrentSrc] = useState(src);
   const titleId = useId();
+
+  useEffect(() => {
+    setCurrentSrc(src);
+  }, [src]);
+
+  const handleImageError = () => {
+    if (currentSrc !== fallbackSrc) setCurrentSrc(fallbackSrc);
+  };
 
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -35,7 +45,7 @@ export default function ImageLightbox({
         onClick={() => setIsOpen(true)}
         aria-label={`Open larger image of ${title || alt}`}
       >
-        <img src={src} className={imageClassName} alt={alt} loading={loading} />
+        <img src={currentSrc} className={imageClassName} alt={alt} loading={loading} onError={handleImageError} />
       </button>
 
       {isOpen ? (
@@ -55,7 +65,7 @@ export default function ImageLightbox({
             >
               <i className="bi bi-x-lg" aria-hidden="true"></i>
             </button>
-            <img src={src} alt={alt} />
+            <img src={currentSrc} alt={alt} onError={handleImageError} />
             {title ? <p id={titleId}>{title}</p> : <span id={titleId} className="visually-hidden">{alt}</span>}
           </div>
         </div>

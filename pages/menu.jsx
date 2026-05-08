@@ -7,7 +7,7 @@ import contact from '../data/contact.json';
 import menuItems from '../data/menu.json';
 
 const pageTitle = 'Menu | Bite & Co Homemade Meals in Barrie & Simcoe';
-const pageDescription = 'Search and order Bite & Co homemade main dishes, desserts, bakery items, and snacks around Barrie and Simcoe.';
+const pageDescription = 'Search and order Bite & Co homemade main dishes, sides, salads, mezze, desserts, bakery items, and snacks around Barrie and Simcoe.';
 
 const menuStructuredData = {
   '@context': 'https://schema.org',
